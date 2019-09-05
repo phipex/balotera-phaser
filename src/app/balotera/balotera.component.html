@@ -1,0 +1,10 @@
+<div class="flex-fill mh-100 border border-primary">
+	<phaser-component [gameConfig]="gameConfig" (gameReady)="onGameReady($event)" class="mh-100 d-flex flex-fill"></phaser-component>
+	 <div>
+	  <span *ngFor="let numero of numeros; index as i; first as isFirst" class="text-dark" (click)="callBall(i)">
+	    numero: {{i}}
+	  </span>
+
+	</div>
+	
+</div>

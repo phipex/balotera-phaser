@@ -1,20 +1,187 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="d-flex flex-column container-fluid min-vw-100 min-vh-100 base-bg text-white" id="main">
+  <div id="panel-superior" class="row flex-fill  border border-primary ">
+    <div id="balotera" class="col-md-3 border border-primary mh-100 d-flex flex-fill">
+      <app-balotera class="d-flex flex-fill" ></app-balotera>
+    </div>
+    <div id="premio" class="col-md-3">
+      
+    </div>
+    <div id="info" class="col-md-6">
+      <div class="container-info-bingo">
+  <div class="fluid-container d-flex flex-column rounded border-blue font-weight-bold base-bg">
+    <div class="flex-fill d-flex flex-row border rounded">
+      <div class="flex-fill rounded info-bingo text-center">
+        Sorteo: 
+      </div>
+      <div class="flex-fill rounded info-bingo text-center">
+        Orden de salida: 
+      </div>
 
+    </div>
+    <div class="flex-fill row rounded">
+
+        <div class = "col-4 rounded align-middle">
+          <div class = "balota-ultima" 
+            >
+            <div class="thisnotUltima bordeMitad"></div>
+            <div class="thisnotUltima text-underline"></div>
+          </div>
+        </div>
+        <div class = "col-8 d-flex flex-column rounded">
+          <div class="d-flex flex-column rounded">
+            <div class="flex-fill  border  rounded info-bingo">
+              Ultimas 5 balotas
+            </div>
+            <div class="d-flex align-middle border-custom rounded">
+              <div class="balotas-ultimas  border-custom rounded d-inline" 
+                >
+                <div class="thisnotUltimas bordeMitad"></div>
+                <div class="thisnotUltimas text-underline"></div>
+              </div>
+              <div class="balotas-ultimas  border-custom rounded d-inline" 
+                >
+                <div class="thisnotUltimas bordeMitad"></div>
+                <div class="thisnotUltimas text-underline"></div>
+              </div>
+              <div class="balotas-ultimas  border-custom rounded d-inline" 
+                >
+                <div class="thisnotUltimas bordeMitad"></div>
+                <div class="thisnotUltimas text-underline"></div>
+              </div>
+              <div class="balotas-ultimas  border-custom rounded d-inline" 
+                >
+                <div class="thisnotUltimas bordeMitad"></div>
+                <div class="thisnotUltimas text-underline"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <button (click)="toggleVista()" class="btn mb-2 text-warning font-weight-bold button-bg">Cambiar vista</button>
+  <div id="panel-inferior" class="flex-fill">
+    <div class="d-flex flex-column flex-xs-column flex-sm-row rounded justify-content-around font-weight-bold text-center" id="tablero">
+	<div id="header-number" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill header-number">
+		<div class="flex-fill columna-b word" id="columna-b"><div class="bg-warning">B</div></div>
+		<div class="flex-fill columna-i word" id="columna-i"><div class="bg-secondary">I</div></div>
+		<div class="flex-fill columna-n word" id="columna-n"><div class="bg-primary">N</div></div>
+		<div class="flex-fill columna-g word" id="columna-g"><div class="bg-info">G</div></div>
+		<div class="flex-fill columna-o word" id="columna-o"><div class="bg-muted">O</div></div>
+	</div>
+	<!--<div class="d-flex">-->
+		<div id="numbers-1" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero1"><div>1</div></div>
+			<div class="flex-fill numero columna-i"  id="numero16"><div>16</div></div>
+			<div class="flex-fill numero columna-n"  id="numero31"><div>31</div></div>
+			<div class="flex-fill numero columna-g"  id="numero46"><div>46</div></div>
+			<div class="flex-fill numero columna-o"  id="numero61"><div>61</div></div>
+		</div>
+		<div id="numbers-2" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero2"><div>2</div></div>
+			<div class="flex-fill numero columna-i"  id="numero16"><div>17</div></div>
+			<div class="flex-fill numero columna-n"  id="numero32"><div>32</div></div>
+			<div class="flex-fill numero columna-g"  id="numero47"><div>47</div></div>
+			<div class="flex-fill numero columna-o"  id="numero62"><div>62</div></div>
+		</div>
+		<div id="numbers-3" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero3"><div>3</div></div>
+			<div class="flex-fill numero columna-i"  id="numero18"><div>18</div></div>
+			<div class="flex-fill numero columna-n"  id="numero33"><div>33</div></div>
+			<div class="flex-fill numero columna-g"  id="numero48"><div>48</div></div>
+			<div class="flex-fill numero columna-o"  id="numero63"><div>63</div></div>
+		</div>
+		<div id="numbers-4" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero4"><div>4</div></div>
+			<div class="flex-fill numero columna-i"  id="numero19"><div>19</div></div>
+			<div class="flex-fill numero columna-n"  id="numero34"><div>34</div></div>
+			<div class="flex-fill numero columna-g"  id="numero49"><div>49</div></div>
+			<div class="flex-fill numero columna-o"  id="numero64"><div>64</div></div>
+		</div>
+		<div id="numbers-5" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero5"><div>5</div></div>
+			<div class="flex-fill numero columna-i"  id="numero20"><div>20</div></div>
+			<div class="flex-fill numero columna-n"  id="numero35"><div>35</div></div>
+			<div class="flex-fill numero columna-g"  id="numero50"><div>50</div></div>
+			<div class="flex-fill numero columna-o"  id="numero65"><div>65</div></div>
+		</div>
+		<div id="numbers-6" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero6"><div>6</div></div>
+			<div class="flex-fill numero columna-i"  id="numero21"><div>21</div></div>
+			<div class="flex-fill numero columna-n"  id="numero36"><div>36</div></div>
+			<div class="flex-fill numero columna-g"  id="numero51"><div>51</div></div>
+			<div class="flex-fill numero columna-o"  id="numero66"><div>66</div></div>
+		</div>
+		<div id="numbers-7" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero7"><div>7</div></div>
+			<div class="flex-fill numero columna-i"  id="numero22"><div>22</div></div>
+			<div class="flex-fill numero columna-n"  id="numero37"><div>37</div></div>
+			<div class="flex-fill numero columna-g"  id="numero52"><div>52</div></div>
+			<div class="flex-fill numero columna-o"  id="numero67"><div>67</div></div>
+		</div>
+		<div id="numbers-8" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero8"><div>8</div></div>
+			<div class="flex-fill numero columna-i"  id="numero23"><div>23</div></div>
+			<div class="flex-fill numero columna-n"  id="numero38"><div>38</div></div>
+			<div class="flex-fill numero columna-g"  id="numero53"><div>53</div></div>
+			<div class="flex-fill numero columna-o"  id="numero68"><div>68</div></div>
+		</div>
+		<div id="numbers-9" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b" id="numero9"><div>9</div></div>
+			<div class="flex-fill numero columna-i"  id="numero24"><div>24</div></div>
+			<div class="flex-fill numero columna-n" id="numero39"><div>39</div></div>
+			<div class="flex-fill numero columna-g"  id="numero54"><div>54</div></div>
+			<div class="flex-fill numero columna-o"  id="numero69"><div>69</div></div>
+		</div>
+		<div id="numbers-10" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b" id="numero10"><div>10</div></div>
+			<div class="flex-fill numero columna-i"  id="numero25"><div>25</div></div>
+			<div class="flex-fill numero columna-n"  id="numero40"><div>40</div></div>
+			<div class="flex-fill numero columna-g"  id="numero55"><div>55</div></div>
+			<div class="flex-fill numero columna-o"  id="numero70"><div>70</div></div>
+		</div>
+		<div id="numbers-11" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero11"><div>11</div></div>
+			<div class="flex-fill numero columna-i"  id="numero26"><div>26</div></div>
+			<div class="flex-fill numero columna-n"  id="numero41"><div>41</div></div>
+			<div class="flex-fill numero columna-g"  id="numero56"><div>56</div></div>
+			<div class="flex-fill numero columna-o"  id="numero71"><div>71</div></div>
+		</div>
+		<div id="numbers-12" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero12"><div>12</div></div>
+			<div class="flex-fill numero columna-i"  id="numero27"><div>27</div></div>
+			<div class="flex-fill numero columna-n"  id="numero42"><div>42</div></div>
+			<div class="flex-fill numero columna-g"  id="numero57"><div>57</div></div>
+			<div class="flex-fill numero columna-o"  id="numero72"><div>72</div></div>
+		</div>
+		<div id="numbers-13" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero13"><div>13</div></div>
+			<div class="flex-fill numero columna-i"  id="numero28"><div>28</div></div>
+			<div class="flex-fill numero columna-n"  id="numero43"><div>43</div></div>
+			<div class="flex-fill numero columna-g"  id="numero58"><div>58</div></div>
+			<div class="flex-fill numero columna-o"  id="numero73"><div>73</div></div>
+		</div>
+		<div id="numbers-14" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero14"><div>14</div></div>
+			<div class="flex-fill numero columna-i"  id="numero29"><div>29</div></div>
+			<div class="flex-fill numero columna-n"  id="numero44"><div>44</div></div>
+			<div class="flex-fill numero columna-g"  id="numero59"><div>59</div></div>
+			<div class="flex-fill numero columna-o"  id="numero74"><div>74</div></div>
+		</div>
+		<div id="numbers-15" class="d-flex flex-row flex-xs-row flex-sm-column flex-fill">
+			<div class="flex-fill numero columna-b"  id="numero15"><div>15</div></div>
+			<div class="flex-fill numero columna-i"  id="numero30"><div>30</div></div>
+			<div class="flex-fill numero columna-n"  id="numero45"><div>45</div></div>
+			<div class="flex-fill numero columna-g"  id="numero60"><div>60</div></div>
+			<div class="flex-fill numero columna-o"  id="numero75"><div>75</div></div>
+		</div>
+	<!--</div>-->
+</div>
+
+  </div>
+</div>
